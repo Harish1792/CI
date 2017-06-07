@@ -1,14 +1,3 @@
-machine:
-    timezone:
-        Asia/Singapore
-    python:
-        version: 2.7.9
-
-checkout:
-    post:
-        # append custom ssh_config
-        #- cat circleci-data/ssh_config >> ~/.ssh/config
-
 dependencies:
     override:
         # install circleci custom requirements
