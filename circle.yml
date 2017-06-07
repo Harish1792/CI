@@ -10,6 +10,6 @@ dependencies:
         #    pwd: src/assets/
 
 test:
-    pre:
-        -python api/test_mathop
+    post:
+        - python api/test_mathop
 
