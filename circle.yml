@@ -1,10 +1,28 @@
 machine:
     timezone:
-           Asia/Singapore
+        Asia/Singapore
+    python:
+        version: 2.7.9
+    node:
+        version: 4.1.0
+
+checkout:
+    post:
+        # append custom ssh_config
+        #- cat circleci-data/ssh_config >> ~/.ssh/config
+
 dependencies:
     override:
-           - pip install -r requirements.txt
+        # install circleci custom requirements
+        #- pip install --upgrade -r circleci-data/pip_requirements.txt
+        # install ventesforces2 requirements
+        - pip install -r requirements.txt
+        #- npm prune && npm install:
+        #    pwd: src/assets/
+        #- bower prune && bower install:
+        #    pwd: src/assets/
+
 test:
     pre:
-            python test_mathop
+        -python api/test_mathop
 
