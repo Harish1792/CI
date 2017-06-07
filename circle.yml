@@ -1,12 +1,10 @@
 machine:
-	timezone:
-		Asia/Singapore
-
+    timezone:
+           Asia/Singapore
 dependencies:
-	override:
-		- pip install -r requirements.txt
-
+    override:
+           - pip install -r requirements.txt
 test:
-	pre:
-		python test_mathop
+    pre:
+            python test_mathop
 
