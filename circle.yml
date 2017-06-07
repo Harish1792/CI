@@ -1,0 +1,12 @@
+machine:
+	timezone:
+		Asia/Singapore
+
+dependencies:
+	override:
+		- pip install -r requirements.txt
+
+test:
+	pre:
+		python test_mathop
+
