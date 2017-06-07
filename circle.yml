@@ -1,0 +1,15 @@
+dependencies:
+    override:
+        # install circleci custom requirements
+        #- pip install --upgrade -r circleci-data/pip_requirements.txt
+        # install ventesforces2 requirements
+        - pip install -r requirements.txt
+        #- npm prune && npm install:
+        #    pwd: src/assets/
+        #- bower prune && bower install:
+        #    pwd: src/assets/
+
+test:
+    post:
+        - python api/test_mathop
+
