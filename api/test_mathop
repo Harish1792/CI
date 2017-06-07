@@ -1,0 +1,17 @@
+import unittest
+import mathop
+import json
+
+class MathOpTest(unittest.TestCase):
+	def test_empty_method(self):
+		tester = mathop.app.test_client(self)
+		response = tester.get('/mathop?a=2&b=4',content_type='application/json')
+		self.assertEqual(response.status_code,200)
+		print (json.loads(response.data))
+		self.assertEqual(json.loads(response.data),{"result":6})
+		self.assertEqual(mathop.index(),"Hello, World!")
+	
+
+
+if __name__ =='__main__':
+	unittest.main()
