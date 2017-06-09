@@ -13,3 +13,10 @@ test:
     post:
         - python api/test_mathop
 
+deployment:
+  production:
+    branch: master
+    commands:
+      - fab -f deploy.py deploy
+
+
