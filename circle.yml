@@ -1,6 +1,9 @@
 dependencies:
     pre:
+        - eval "(ssh-agent)"
         - ssh-add -l
+        - ssh-add -k .ssh/id_circleci_github
+        - ssh-add -l 
     override:
         - pip install -r requirements.txt
 test:
