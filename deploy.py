@@ -5,7 +5,7 @@ from fabric.contrib.console import confirm
 env.hosts = ['128.199.132.3']
 env.user='root'
 env.password='server1'
-env.forward_agent = True
+#env.forward_agent = True
 #runenv.use_ssh_config = True
 
 '''
