@@ -18,7 +18,7 @@ def prepare():
     run ('ssh-add -l')
 
 def deploy():
-    prepare()
+    #prepare()
     code_dir = '/fab'
     print (run('pwd'))
     #code_dir ='/Users/harikrishnan/Documents/work/CI/fab'
