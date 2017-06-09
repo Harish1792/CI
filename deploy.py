@@ -12,7 +12,13 @@ env.forward_agent = True
 def taska():
     run('whoami')
 '''
+
+def prepare():
+    run ('eval ssh-agent $SHELL')
+    run ('ssh-add -l')
+
 def deploy():
+    prepare()
     code_dir = '/fab'
     print (run('pwd'))
     #code_dir ='/Users/harikrishnan/Documents/work/CI/fab'
