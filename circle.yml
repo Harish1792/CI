@@ -14,9 +14,8 @@ test:
         - python api/test_mathop
 
 deployment:
-  production:
-    branch: master
-    commands:
-      - fab -f deploy.py deploy
-
+    production:
+        branch: Production
+        commands:
+            - fab -f deploy.py deploy:
 
