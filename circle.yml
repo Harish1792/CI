@@ -1,5 +1,5 @@
 dependencies:
-    override:
+override:
         # install circleci custom requirements
         #- pip install --upgrade -r circleci-data/pip_requirements.txt
         # install ventesforces2 requirements
@@ -8,7 +8,9 @@ dependencies:
         #    pwd: src/assets/
         #- bower prune && bower install:
         #    pwd: src/assets/
-
+checkout:
+    pre:
+        - eval ssh-agent $SHELL
 test:
     post:
         - python api/test_mathop
