@@ -2,9 +2,9 @@ from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
 
-env.hosts = ['128.199.132.3']
+env.hosts = ['188.166.185.151']
 env.user='root'
-env.password='server1'
+env.password='server2'
 env.forward_agent = True
 #runenv.use_ssh_config = True
 
