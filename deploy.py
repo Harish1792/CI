@@ -25,7 +25,7 @@ def deploy():
     with settings(warn_only=True):
         print (run("test -d %s" % code_dir).failed,"adadsdadadd")
         if run("test -d %s" % code_dir).failed:
-            run("git clone git@github.com:Harish1792/CI.git %s" % "fab/")
+            run("git clone -b Production git@github.com:Harish1792/CI.git %s" % "fab/")
     #with cd(code_dir):
     #    run("git pull")
         #run("touch app.wsgi")
