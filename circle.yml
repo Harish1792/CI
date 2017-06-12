@@ -1,6 +1,6 @@
 dependencies:
     pre:
-        - eval "(ssh-agent -s)"
+        - ssh-agent /bin/bash
         - ssh-add -l
         - ssh-add -k .ssh/id_circleci_github
         - ssh-add -l 
